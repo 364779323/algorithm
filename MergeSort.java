@@ -37,7 +37,7 @@ public class test2 {
         } else {
 
             //取中间的数，进行拆分
-            int M = (L + R) / 2;
+            int M = (L + R) >> 1;
 
             //左边的数不断进行拆分
             mergeSort(arrays, L, M);
@@ -96,16 +96,11 @@ public class test2 {
         }
 
         //如果左边的数组还没比较完，右边的数都已经完了，那么将左边的数抄到大数组中(剩下的都是大数字)
-        while (i < leftArray.length) {
+        while (i < leftArray.length) 
             arrays[k++] = leftArray[i++];
 
-            i++;
-            k++;
-        }
         //如果右边的数组还没比较完，左边的数都已经完了，那么将右边的数抄到大数组中(剩下的都是大数字)
-        while (j < rightArray.length) {
+        while (j < rightArray.length)
             arrays[k++] = rightArray[j++];
-
-        }
     }
 }
