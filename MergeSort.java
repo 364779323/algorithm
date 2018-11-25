@@ -52,6 +52,6 @@ public class MergeSort {
         for (int x = 0; x < temp.length; x++)
             arr[x + left] = temp[x];
     }
-    temp=null；//回收临时数组
+    temp=null；//释放临时数组的空间
 
 }
